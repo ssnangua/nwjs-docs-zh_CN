@@ -16,7 +16,7 @@
 2. 安装依赖
     - Python 2: `pip install mkdocs==0.17.3 pygments pymdown-extensions==6.2.1`
     - Python 3: `pip install mkdocs pygments pymdown-extensions`
-3. 如果安装的是 Python 3，按下面的 [说明](Python-3-说明) 修改 `mkdocs.yml`，Python 2 无需处理
+3. 如果安装的是 Python 3，按下面的 [说明](#Python-3-说明) 修改 `mkdocs.yml`，Python 2 无需处理
 4. 文档源码根目录运行 `mkdocs serve`
 5. 在浏览器中打开 http://localhost:8000/
 
