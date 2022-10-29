@@ -2,8 +2,8 @@
 
 > **非官方中文文档**，当前版本：nw69。
 > 中文文档源码：https://github.com/ssnangua/nwjs-docs-zh_CN
-> 官方文档：https://nwjs.readthedocs.io/
-> 官方仓库：https://github.com/nwjs/nw.js
+> 官方文档站点：https://nwjs.readthedocs.io/
+> 官方项目仓库：https://github.com/nwjs/nw.js
 
 ---
 

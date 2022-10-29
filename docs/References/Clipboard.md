@@ -38,7 +38,7 @@ clipboard.clear();
 
 将 `type` 类型的 `data` 写入剪贴板.
 
-该方法将清空剪贴板并替换为传入的 `data`，每次调用都会覆盖掉原来的数据，如果想要同时写入多种类型的数据，需要使用 [clip.set(clipboardDataList)](clipsetclipboardDataList)。
+该方法将清空剪贴板并替换为传入的 `data`，每次调用都会覆盖掉原来的数据，如果想要同时写入多种类型的数据，需要使用 [clip.set(clipboardDataList)](#clipsetclipboardDataList)。
 
 !!! tip "图片格式"
     剪贴板支持读写 JPEG 或 PNG 类型的图片数据。如果不传入 `raw` 或传入 `false`，`data` 为有效的 Base64 编码的 [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs)。如果 `raw` 传入 `true`，则 `data` 为 Base64 编码的图片数据（不包含 `data:<mime-type>;base64,` 部分）。
