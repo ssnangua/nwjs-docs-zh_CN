@@ -98,10 +98,11 @@ cat nw app.nw > app && chmod +x app
 * `Contents/Info.plist`：包描述文件。参考 [实现 Cocoa 的标准关于面板](http://cocoadevcentral.com/articles/000071.php) 查看此文件如何影响应用，以及您应该修改哪些字段。
 
 要重命名应用，需要修改以下字段：
+
 * `Contents/Info.plist` - CFBundleDisplayName
 * `Contents/Resources/en.lproj/InfoPlist.strings` - CFBundleDisplayName
 * `Contents/MacOS/nwjs` - 将文件重命名为 `CFBundleExecutable` 的值，如果你改了它的话
-* `package.json` - 添加一个新的字符串字段 `product_string` （如 foobar），帮助应用将显示为 'foobar Helper'。（自 v0.24.4 起）
+* `package.json` - 添加一个新的字符串字段 `product_string` （如 foobar，帮助应用将显示为 “foobar Helper”）（自 v0.24.4 起）。
   * `Contents/Frameworks/nwjs Framework.framework/Versions/n.n.n.n/nwjs Helper.app/Contents/MacOS/nwjs Helper.app` - 目录重命名为 'foobar Helper.app'，其他三个帮助应用也是
   * `Contents/Frameworks/nwjs Framework.framework/Versions/n.n.n.n/nwjs Helper.app/Contents/MacOS/nwjs Helper.app/Contents/Info.plist` - 修改 CFBundleDisplayName，其他三个帮助应用也是
 

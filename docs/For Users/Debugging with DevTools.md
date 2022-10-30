@@ -8,13 +8,13 @@
 
 Windows 和 Linux 下使用快捷键 <kbd>F12</kbd> 来打开开发者工具，Mac 下使用 </kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> 来打开。
 
-此外，也可以在代码中使用 NW.js 的 API [win.showDevTools()`](../References/Window.md##winshowdevtoolsiframe-headless-callback) 来打开一个窗口的开发者工具。
+此外，也可以在代码中使用 NW.js 的 API [`win.showDevTools()`](../References/Window.md##winshowdevtoolsiframe-callback) 来打开一个窗口的开发者工具。
 
 ## 调试 Node.js 模块
 
-NW.js 默认运行在 [独立环境模式](Advanced/JavaScript Contexts in NW.js.md#separate-context-mode) 下，要调试 Node.js 模块，可以在应用上右键，选择 "Inspect Background Page"（检查背景页），当运行到 Node.js 模块的 debugger 时，背景页的开发者工具会自动获得焦点并暂停在断点处。
+NW.js 默认运行在 [独立环境模式](Advanced/JavaScript Contexts in NW.js.md#独立环境模式) 下，要调试 Node.js 模块，可以在应用上右键，选择 "Inspect Background Page"（检查背景页），当运行到 Node.js 模块的 debugger 时，背景页的开发者工具会自动获得焦点并暂停在断点处。
 
-如果您的应用运行在 [混合环境模式](Advanced/JavaScript Contexts in NW.js.md#mixed-context-mode) 下，Node.js 模块可以直接在窗口的开发者工具中调试。
+如果您的应用运行在 [混合环境模式](Advanced/JavaScript Contexts in NW.js.md#混合环境模式) 下，Node.js 模块可以直接在窗口的开发者工具中调试。
 
 参考 [JavaScript 环境](Advanced/JavaScript Contexts in NW.js.md) 查看它们的差异。
 

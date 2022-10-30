@@ -1,0 +1,20 @@
+.rst-content blockquote {
+  margin-left: 0;
+  border-left: 4px solid #e0e2e5;
+  color: #777777;
+  padding: 0 15px;
+}
+.rst-content blockquote p {
+  margin-bottom: 0px;
+}
+
+.codehilite pre {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1.5px solid #e8eaed;
+  background-color: #f8f8f8;
+  white-space: pre-wrap;
+}
+.codehilite pre span {
+  word-break: break-all;
+}

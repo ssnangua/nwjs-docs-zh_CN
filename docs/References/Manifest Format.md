@@ -42,7 +42,7 @@
 
 ### product_string
 
-* `{String}` 用于 [重命名 macOS 下的帮助应用](http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/#mac-os-x)。
+* `{String}` 用于 [重命名 macOS 下的帮助应用](../For Users/Package and Distribute/#mac-os-x)。
 
 ### nodejs
 
@@ -71,11 +71,11 @@
 
 ### window
 
-* `{Object}` 控制窗口外观，参考 [Window 子字段](#Window-子字段)。
+* `{Object}` 控制窗口外观，参考 [Window 子字段](#Window子字段)。
 
 ### webkit
 
-* `{Object}` 控制 WebKit 特性，参考 [WebKit 子字段](#WebKit-子字段)。
+* `{Object}` 控制 WebKit 特性，参考 [WebKit 子字段](#WebKit子字段)。
 
 ### user-agent
 
@@ -175,6 +175,7 @@
 
 * `{Boolean}` Mac OS X 系统上是否显示默认的 `Edit`（`编辑`）菜单。默认值为 `false`。该字段只在 Mac OS X 系统上有效。
 
+<span id="Window子字段"></span>
 ## Window 子字段
 
 默认情况下，窗口的子字段大部分会被继承到使用 `window.open()` 或 `<a target="_blank">` 打开的子窗口。以下子字段不会被继承，打开窗口时会使用默认值：
@@ -185,7 +186,7 @@
 * `resizable` -> `true`
 * `show` -> `true`
 
-所有的窗口子字段都可以通过 [`new-win-policy` 事件](Window.md#event-new-win-policy-frame-url-policy) 进行重写。
+所有的窗口子字段都可以通过 [`new-win-policy` 事件](Window.md#new-win-policy-frame-url-policy) 进行重写。
 
 ### id
 
@@ -292,6 +293,7 @@
 
 "click-through"（穿透点击）是一个实验性特性，支持鼠标点击时穿透窗体的透明区域：在命令行参数中添加 `--disable-gpu`。
 
+<span id="WebKit子字段"></span>
 ## WebKit 子字段
 
 ### double_tap_to_zoom_enabled

@@ -72,11 +72,11 @@ nw.Window.open('https://github.com/nwjs/nw.js', {}, function(new_win) {
     从 0.13.0 版本开始，该方法发生了变化，参考 [从 0.12 升级到 0.13](../For Users/Migration/From 0.12 to 0.13.md)。
 
 * `url` `{String}` 打开的窗口要加载的 URL 
-* `options` `{Object}` _可选_ 参考配置格式中的 [Window 子字段](Manifest Format.md#window-subfields)。此外，还支持以下额外字段：
+* `options` `{Object}` _可选_ 参考配置格式中的 [Window 子字段](Manifest Format.md#Window子字段)。此外，还支持以下额外字段：
     - `new_instance` `{Boolean}` _可选_ 是否在独立的渲染进程中打开新窗口。
     - `mixed_context` `{Boolean}` _Optional_ 如果为 true，Node 环境和 DOM 上下文会被合并到新的窗口进程。只在 `new_instance` 为 true 时有效。
     - `inject_js_start` `{String}` _可选_ 在构建 DOM 和执行脚本之前，注入脚本。参考 [配置格式](Manifest Format.md#inject_js_start)。
-    - `inject_js_end` `{String}` _可选_ 在 document 对象加载完成后注入脚本。参考 [配置格式](Manifest Format.md#inject_js_start)。
+    - `inject_js_end` `{String}` _可选_ 在 document 对象加载完成后注入脚本。参考 [配置格式](Manifest Format.md#inject_js_end)。
     - `id` `{String}` _可选_ 用于识别窗口，以纪录窗口的大小和位置，当拥有相同 `id` 的窗口被重新打开时会恢复纪录的状态。参考 [Chrome 应用文档](https://developer.chrome.com/apps/app_window#type-CreateWindowOptions)
 * `callback(win)` `{Function}` _可选_ 回调函数，参数为打开的本地窗口的 `Window` 对象。
 
@@ -235,7 +235,7 @@ Mac OS X 系统上，放大窗口。
 ## win.unmaximize()
 
 !!! warning "已弃用"
-    从 0.13.0 版本开始，该属性已被弃用。现在使用 [`restore` 事件](#事件restore) 代替。参考 [从 0.12 升级到 0.13](../For Users/Migration/From 0.12 to 0.13.md)。
+    从 0.13.0 版本开始，该属性已被弃用。现在使用 [`restore` 事件](#restore) 代替。参考 [从 0.12 升级到 0.13](../For Users/Migration/From 0.12 to 0.13.md)。
 
 取消窗口最大化，`maximize()` 的逆向操作。
 
@@ -507,7 +507,7 @@ win.captureScreenshot({ fullSize: true }, (err, data) => {
 设置任务栏或 dock 中的窗口图标的标记（俗称小红点，如未读消息数）。
 
 !!! note "Linux"
-    Linux 系统只支持 Ubuntu，且 label 只能是字符串数值，且同样需要指定应用程序的 `.desktop` 文件（参考 [`setProgressBar`](#winsetprogressbar)）。
+    Linux 系统只支持 Ubuntu，且 label 只能是字符串数值，且同样需要指定应用程序的 `.desktop` 文件（参考 [`setProgressBar`](#winsetprogressbarprogress)）。
 
 ## win.eval(frame, script)
 
@@ -599,7 +599,7 @@ nw.Window.open('popup.html', {}, function (win) {
 窗口中的 document 对象或子 iframe 可用时触发，所有的文件都已加载完成，但 DOM 还未初始化，脚本也还没开始运行。
 在使用 nw.Window.open() 创建的新窗口上不会触发该事件：那个函数的回调和该事件会在同一时间触发。 
 
-参考配置格式中的 [`inject-js-start`](Manifest Format.md#inject-js-start) 字段。
+参考配置格式中的 [`inject_js_start`](Manifest Format.md#inject_js_start) 字段。
 
 ## 事件：document-end(frame)
 
@@ -607,7 +607,7 @@ nw.Window.open('popup.html', {}, function (win) {
 
 窗口中的 document 对象或子 iframe 卸载时触发，在 `onunload` 事件触发之前。
 
-参考配置格式中的 [`inject-js-end`](Manifest Format.md#inject-js-end) 字段。
+参考配置格式中的 [`inject_js_end`](Manifest Format.md#inject_js_end) 字段。
 
 ## 事件：focus
 
@@ -647,7 +647,7 @@ nw.Window.open('popup.html', {}, function (win) {
 ## 事件：leave-fullscreen
 
 !!! warning "已弃用"
-    从 0.13.0 版本开始，该特性已被弃用。现在使用 [`restore` 事件](#事件restore) 代替。参考 [从 0.12 升级到 0.13](../For Users/Migration/From 0.12 to 0.13.md)。
+    从 0.13.0 版本开始，该特性已被弃用。现在使用 [`restore` 事件](#restore) 代替。参考 [从 0.12 升级到 0.13](../For Users/Migration/From 0.12 to 0.13.md)。
 
 窗口退出全屏模式时触发。
 
@@ -683,7 +683,7 @@ nw.Window.open('popup.html', {}, function (win) {
     * `forceDownload()`：强行将链接作为可下载内容，或使用外部程序打开
     * `forceNewWindow()`：强制在新窗口中打开链接
     * `forceNewPopup()`：强制在新弹出窗口中打开链接
-    * `setNewWindowManifest(m)`：控制新弹出窗口中的设置。`m` 的格式与配置格式中的 [Window 子字段](Manifest Format.md#window-subfields) 相同。
+    * `setNewWindowManifest(m)`：控制新弹出窗口中的设置。`m` 的格式与配置格式中的 [Window 子字段](Manifest Format.md#Window子字段) 相同。
 
 当前窗口或子 iframe 要打开一个新窗口时触发。可以在回调函数中调用 `policy.*` 方法来改变打开新窗口的默认行为。
 
@@ -708,5 +708,5 @@ nw.Window.get().on('new-win-policy', function(frame, url, policy) {
 * `policy` `{Object}` 一个包含以下方法的对象：
     * `ignore()`：忽略请求，不会发生默认的导航行为。
 
-要导航到其他页面时触发。类似于 [`new-win-policy`](#事件new-win-policy-frame-url-policy)，可以在回调函数中调用 `policy.ignore()` 来忽略默认的导航行为。
+要导航到其他页面时触发。类似于 [`new-win-policy`](#new-win-policy-frame-url-policy)，可以在回调函数中调用 `policy.ignore()` 来忽略默认的导航行为。
 

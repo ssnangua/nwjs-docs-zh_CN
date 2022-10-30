@@ -18,6 +18,7 @@ python test/test.py -t 80 auto
 python test/test.py -t 80 remoting
 ```
 
+<span id="编写测试用例"></span>
 ## 编写测试用例
 
 ### 自动测试用例
@@ -26,7 +27,7 @@ python test/test.py -t 80 remoting
 
 ### 远程测试用例
 
-远程测试用例由 ChromeDriver 驱动，通常这些测试用例涉及到用户交互，参考[ChromeDriver 测试](../For Users/Advanced/Test with ChromeDriver.md) . 
+远程测试用例由 ChromeDriver 驱动，通常这些测试用例涉及到用户交互，参考[ChromeDriver 测试](../For Users/Advanced/Test with ChromeDriver.md)。
 
 远程测试用例需要应用根目录中有一个 `test.py` 文件。
 

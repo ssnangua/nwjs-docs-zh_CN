@@ -25,7 +25,7 @@ nwjc source.js binary.bin
 ```javascript
 nw.Window.get().evalNWBin(frame, 'binary.bin');
 ```
-[win.evalNWBin()](../../References/Window.md#winevalnwbin) 方法中的参数与 `Window.eval()` 方法类似，第一个参数为目标 iframe（主框架传入 `null`），第二个参数是编译后的 bin 文件。
+[win.evalNWBin()](../../References/Window.md#winevalnwbinframe-path) 方法中的参数与 `Window.eval()` 方法类似，第一个参数为目标 iframe（主框架传入 `null`），第二个参数是编译后的 bin 文件。
 
 如果要将 bin 文件作为模块加载，用 [win.evalNWBinModule()](../../References/Window.md#winevalnwbinmoduleframe-path-module_path) 替代。
 
@@ -47,7 +47,7 @@ xhr.onload = () => {
 ```
 
 !!! note "注意"
-    编译后的代码会在 [浏览器环境](JavaScript Contexts in NW.js.md#浏览器环境) 中执行，就如其他运行在浏览器环境中的脚本一样，您可以使用任何 Web API（如 DOM）和 [访问 Node.js 和 NW.js 的 API](JavaScript Contexts in NW.js.md#访问-nodejs-和-nwjs-的-api)。
+    编译后的代码会在 [浏览器环境](JavaScript Contexts in NW.js.md#浏览器环境) 中执行，就如其他运行在浏览器环境中的脚本一样，您可以使用任何 Web API（如 DOM）和 [访问 Node.js 和 NW.js 的 API](JavaScript Contexts in NW.js.md#访问Node.js和NW.js的API)。
 
 ### 在 Web Workers 中使用
 
@@ -152,6 +152,7 @@ CommonJS(); // 输出：CommonJS 模块
 编译时如果带了 `--nw-module` 参数，加载时必须要用 `evalNWBinModule()`，不带则必须用 `evalNWBin()`，严格对应，用错加载方法会导致应用崩溃。
 
 一个 bin 文件中不能同时使用两种模块规范，虽然编译能通过，但引入会报错：
+
 - `import`：CommonJS 模块规范的 `exports` 对象未定义
 - `require()`：识别不了 ES6 模块规范的 `export` 语法
 

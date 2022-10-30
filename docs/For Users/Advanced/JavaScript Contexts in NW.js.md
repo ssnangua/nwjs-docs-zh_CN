@@ -21,6 +21,7 @@ NW.js 基于 Chrome 应用构建，因此 NW.js 在启动时会自动加载一�
 
 在 NW.js 中，Node.js 模块会在后台页面所运行的上下文中加载。当以混合环境模式运行时，Node.js 模块也会在每个窗口或框架的上下文中加载。参考 [独立环境模式](#独立环境模式) 和 [混合环境模式](#混合环境模式)。
 
+<span id="独立环境模式"></span>
 ## 独立环境模式
 
 除了浏览器创建的环境，NW.js 在后台页面中引入了一个额外的 Node 环境，用于运行 Node 模块。所以，NW.js 有两个 JavaScript 环境: **浏览器环境** 和 **Node 环境**。
@@ -28,6 +29,7 @@ NW.js 基于 Chrome 应用构建，因此 NW.js 在启动时会自动加载一�
 !!! note "Web Worker"
     您可以在 Web Worker 中 [访问 Node.js APIs](https://nwjs.io/blog/v0.18.4/)，需要在配置文件中添加 `"chromium-args": "--enable-node-worker"`。
 
+<span id="浏览器环境"></span>
 ### 浏览器环境
 
 #### 加载脚本
@@ -42,6 +44,7 @@ NW.js 基于 Chrome 应用构建，因此 NW.js 在启动时会自动加载一�
 
 每个窗口或框架都有属于自己的环境，当您创建一个新的框架或者窗口时，将得到一个新的浏览器环境。
 
+<span id="访问Node.js和NW.js的API"></span>
 #### 访问 Node.js 和 NW.js 的 API
 
 Node 环境的一些对象被拷贝到了浏览器环境中，所以运行在浏览器环境中的脚本可以访问这些 Node.js 对象：
@@ -69,7 +72,7 @@ Node 环境中加载脚本有以下方式：
 Node 环境中运行的脚本，可以像浏览器环境中一样使用 [JS 内建对象]()，此外还可以使用 [Node.js 定义的全局对象](https://nodejs.org/api/globals.html)，如 `__dirname`、`process`、`Buffer` 等。
 
 !!! note "注意"
-    Node 环境不能使用 Web API。参考 [Node 环境访问浏览器和 NW.js API](#Node-环境访问浏览器和-NWjs-API) 查看使用的方法。
+    Node 环境不能使用 Web API。参考 [Node 环境访问浏览器和 NW.js API](#nwjs-api) 查看使用的方法。
 
 #### 创建新的 Node 环境
 **在独立环境模式下，所有的 Node 模块共享同一个 Node 环境**，不过您也可以通过下面的方法来创建新的 Node 环境：
@@ -77,7 +80,7 @@ Node 环境中运行的脚本，可以像浏览器环境中一样使用 [JS 内�
 * 通过 [`Window.open()`](../../References/Window.md#windowopenurl-options-callback) 创建新窗口时，将参数 `new_instance` 设置为 `true`。
 * 启动 NW.js 时，使用命令行参数 `--mixed-context` 来进入 [混合环境模式](#混合环境模式)
 
-#### Node 环境访问浏览器和 NW.js API
+#### 访问浏览器和 NW.js API
 
 Node 环境中没有浏览器端以及 NW.js 的 API，如 `alert()`、`document.*`、`nw.Clipboard` 等。要访问浏览器 API，您必须将相应的对象（如 `window` 对象）通过 Node 环境中的函数传进来。
 
@@ -107,9 +110,10 @@ myscript.setText(document.getElementbyId('el'));
 
 Node 模块中的相对路径基于当前模块的路径（与 Node.js 中引入模块的方式相同）。
 
+<span id="混合环境模式"></span>
 ## 混合环境模式
 
-混合环境在 0.13 版本引入。如果带着 [`--mixed-context` 命令行参数](../../References/Command Line Options.md#mixedcontext) 启动 NW.js，当一个浏览器环境被创建的同时，也会创建一个 Node 环境，两个环境同时运行在同一个浏览器环境中，即混合环境。
+混合环境在 0.13 版本引入。如果带着 [`--mixed-context` 命令行参数](../../References/Command Line Options.md#-mixed-context) 启动 NW.js，当一个浏览器环境被创建的同时，也会创建一个 Node 环境，两个环境同时运行在同一个浏览器环境中，即混合环境。
 
 ### 加载脚本
 
@@ -142,6 +146,7 @@ exports.showAlert = function() {
 ```
 
 在混合环境下，下面的比较是成立的：
+
 `index.html`
 ```html
 <script>
@@ -167,6 +172,7 @@ myscript.showAlert(); // 我运行在 Node 模块里！
 > 如果是独立环境模式，在窗口 A 中赋值 `global.a = 1`，在窗口 B 中也能访问到 `global.a`，因为 `global` 是两个窗口共用的 Node 环境（后台页面）的全局对象。
 > 但在混合环境模式下，这样就行不通了，因为每个浏览器环境都会生成一个独立的 Node 环境。
 
+<span id="多环境的使用"></span>
 ## 多环境的使用
 
 环境之间区分开通常是有利的，但有时也可能引发一些问题。

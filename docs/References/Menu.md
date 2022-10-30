@@ -140,7 +140,7 @@ function createMenu(items, option = { type: "contextmenu" }) {
 
 创建菜单：
 
-```
+```javascript
 const menu = createMenu([
     {
         label: "菜单项 1",

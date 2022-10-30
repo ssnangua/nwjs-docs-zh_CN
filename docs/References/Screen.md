@@ -123,6 +123,7 @@ nw.Screen.chooseDesktopMedia(["window","screen"],
 
 `Screen.DesktopCaptureMonitor` 是一个 `EventEmitter` 实例，可以使用 `Screen.DesktopCaptureMonitor.on()` 来侦听相关事件。
 
+<span id="示例Screen.DesktopCaptureMonitor"></span>
 ### 示例
 
 ```javascript
@@ -175,7 +176,7 @@ dcm.start(true, true);
 ### Screen.DesktopCaptureMonitor.registerStream(id)
 
 注册并返回一个有效的流 id，可以传递给 `getUserMedia` 约束条件里的 `chromeMediaSourceId`。
-参考 [示例](#示例-1)。
+参考 [示例](#示例Screen.DesktopCaptureMonitor)。
 
 ### 事件：added (id, name, order, type, primary)
 
@@ -227,7 +228,7 @@ dcm.start(true, true);
 
 当源的缩略图更新时触发。
 
-## 完整示例
+## 译者注：完整示例
 
 > 下面是译者的一些尝试，有兴趣的可以玩一下
 

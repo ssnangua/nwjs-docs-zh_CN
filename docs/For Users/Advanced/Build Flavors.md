@@ -10,5 +10,5 @@ NW.js 支持不同的构建风格，以减小应用包大小。目前支持以�
 
 代码中可以通过 `process.versions['nw-flavor']` 来查看当前应用是哪种构建风格。 
 
-参考 [构建 NW.js](../../For Developers/Building NW.js.md#build-flavors) 查看如何从源码构建自己的 NW.js 版本。
+参考 [构建 NW.js](../../For Developers/Building NW.js.md#构建风格) 查看如何从源码构建自己的 NW.js 版本。
 

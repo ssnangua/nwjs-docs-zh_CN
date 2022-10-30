@@ -77,7 +77,7 @@ cd /path/to/your/app
 
 ### 示例 2 - 使用 NW.js API
 
-所有的 NW.js API 都被挂载到一个名为 `nw` 的全局对象中，可以直接使用。参考 [API](../index.md#references) 查看支持的所有 API 列表。
+所有的 NW.js API 都被挂载到一个名为 `nw` 的全局对象中，可以直接使用。参考 [API](../index.md#api) 查看支持的所有 API 列表。
 
 本例展示了如何在 NW.js 应用中创建一个原生的上下文菜单。用下面的内容创建 `index.html` 文件：
 

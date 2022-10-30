@@ -146,6 +146,7 @@ cd src
 ninja -C out/nw copy_node
 ```
 
+<span id="构建风格"></span>
 ## 构建风格
 
 * 普通包：`nwjs_sdk=false`
@@ -157,6 +158,7 @@ ninja -C out/nw copy_node
 
 由于许可问题，NW.js 的预构建二进制文件不支持私有编解码器（如 H.264），所以在预构建版本中，您无法使用 `<audio>` 和 `<video>` 标签来播放 MP3/MP4。要构建支持这些媒体的 NW.js，可以参考 [使用私有编解码器](Enable Proprietary Codecs.md) 中的说明。
 
+<span id="快速构建"></span>
 ## 快速构建
 
 Google 的网站中，有一些可以提高构建速度的提示，参考下面的链接:

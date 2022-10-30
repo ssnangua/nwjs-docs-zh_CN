@@ -6,6 +6,7 @@
 当 NW.js 崩溃时，会在硬盘上生成一个 `minidump` 文件（`.dmp`）。用户可以将它包含在 bug 报告里，您可以解码该文件来获取崩溃时的堆栈跟踪信息，在某些情况下，这对于定位问题是很有帮助的。
 
 要提取 `minidump` 文件中的堆栈跟踪信息，需要有三个条件：
+
 - 崩溃时生成的 minidump 文件（`.dmp`，）（**译者注：**[小型转储文件](https://learn.microsoft.com/zh-cn/windows/win32/debug/minidump-files)）
 - NW.js 的 Symbol 文件（`.sym`）（**译者注：**[符号文件](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/using-symbols)）
 - `minidump_stackwalk` 工具
@@ -29,9 +30,7 @@ NW.js 崩溃时会在下面的默认目录中生成 minidump 文件：
 发布版本的 NW.js 的 Symbol 文件包可以在 [https://dl.nwjs.io/](https://dl.nwjs.io/) 上下载。
 
 例如，Mac 上，`0.57.1` 版本：
-
 [https://dl.nwjs.io/v0.57.1/nwjs-symbol-v0.57.1-osx-x64.zip](https://dl.nwjs.io/v0.57.1/nwjs-symbol-v0.57.1-osx-x64.zip)
-
 [https://dl.nwjs.io/v0.57.1/nwjs-sdk-symbol-v0.57.1-osx-x64.zip](https://dl.nwjs.io/v0.57.1/nwjs-sdk-symbol-v0.57.1-osx-x64.zip)
 
 然后您需要将 Symbol 文件改为正确的文件名并整理到正确的路径，以便于 `minidump_stackwalk` 工具使用。`minidump_stackwalk` 使用[simple symbol supplier](https://code.google.com/p/chromium/codesearch#chromium/src/breakpad/src/processor/simple_symbol_supplier.cc&l=142) 来查找 Symbol 文件，下面是它查找的方式。

@@ -9,6 +9,7 @@
 
 本文档将介绍如何给一个基于 NW.js 的 macOS 应用签名。
 
+<span id="签名准备"></span>
 ## 签名准备
 
 * 通过 [iTunesConnect](https://itunesconnect.apple.com) 创建一个 macOS 应用

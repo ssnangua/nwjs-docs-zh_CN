@@ -6,7 +6,7 @@
 > 事实上，该特性对于 NW.js 来说有些鸡肋，它能做的，Node 原生模块也都能做，实在没有太大的研究意义。
 > 如果您想研究：
 >
-> - 教程中 NaCl SDK 的下载链接已失效，可以在 [这里](https://developer.chrome.com/docs/native-client/sdk/download/) 下载。
+> - 教程中的 NaCl SDK 下载链接已失效，可以在 [这里](https://developer.chrome.com/docs/native-client/sdk/download/) 下载。
 > - 参考 `nacl_sdk/sdk_tools/sdk_update_main.py` 的源码，拼接出 SDK 的 [远程配置链接](https://storage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/naclsdk_config.json)，貌似服务也已经挂了，可以在 [这里](https://developer.samsung.com/smarttv/develop/extension-libraries/nacl/download.html) 下载 Pepper 工具链，教程中的示例代码也在里面。
 
 [TOC]
@@ -38,6 +38,7 @@ NaCl 的通信系统是 Pepper API 的一部分，[开发者指南：通信系�
 ## 步骤 1：下载并安装 NaCl SDK
 根据 [下载](https://developer.chrome.com/native-client/sdk/download.html) 里的介绍，下载并安装 NaCl SDK。
 
+<span id="步骤2启动一个本地服务器"></span>
 ## 步骤 2：启动一个本地服务器
 为了模拟生产环境，SDK 提供了一个简单的 web 服务器，可以通过 `localhost` 访问。运行 Makefile 规则 `serve` 来调用它：
 
@@ -53,6 +54,7 @@ $ make serve
 
 任何服务器都可以用于开发，SDK 只是提供了一个便捷的方式，不是必须的。
 
+<span id="步骤3设置Chrome浏览器"></span>
 ## 步骤 3：设置 Chrome 浏览器
 Chrome 的 PNaCl 默认是开启的，建议使用与 SDK 包版本相同或更高的 Chrome 版本，低版本的 PNaCl 模块能在高版本的 Chrome 正常工作，但反过来却不一定。
 
@@ -89,7 +91,7 @@ $ make
 
 因为示例包含在 SDK 目录结构中，所以 Makefile 知道如何找到 PNaCl 工具链并使用它来构建模块。如果您在 NaCl SDK 目录外部构建应用，需要设置 `$NACL_SDK_ROOT` 环境变量。参考 [构建 NaCl 模块](https://developer.chrome.com/native-client/devguide/devcycle/building.html)。
 
-假设已按照 [步骤 2](#步骤-2启动一个本地服务器) 中的说明启动了本地服务器，您现在可以在 Chrome 中打开 http://localhost:5103/part1 来加载示例，如果 Native Client 模块成功加载，状态文本会从 “LOADING...” 变为 “SUCCESS”。如果遇到问题，请查看下面的 [排查故障](#排查故障) 部分。
+假设已按照 [步骤 2](#步骤2启动一个本地服务器) 中的说明启动了本地服务器，您现在可以在 Chrome 中打开 http://localhost:5103/part1 来加载示例，如果 Native Client 模块成功加载，状态文本会从 “LOADING...” 变为 “SUCCESS”。如果遇到问题，请查看下面的 [问题排查](#问题排查) 部分。
 
 ## 步骤 6：修改 JavaScript 代码来给 NaCl 发送一条消息
 该步骤中，您将修改页面文件（`index.html`），让页面在 NaCl 模块加载完成之后，向它发送一条消息。
@@ -150,9 +152,10 @@ virtual void HandleMessage(const pp::Var& var_message) {
 
 在 Chrome 加载 NaCl 模块后，您将看到来自模块发送的消息。
 
+<span id="问题排查"></span>
 ## 问题排查
 
-如果应用不能运行，查看上面的 [步骤 3](#步骤-3设置-Chrome-浏览器)，检查环境配置是否正确，包括浏览器和本地服务器。确保当前运行的 Chrome 版本大于或等于使用的 SDK 包版本。
+如果应用不能运行，查看上面的 [步骤 3](#步骤3设置Chrome浏览器)，检查环境配置是否正确，包括浏览器和本地服务器。确保当前运行的 Chrome 版本大于或等于使用的 SDK 包版本。
 
 另一个有用的调试辅助工具是 Chrome 的 JavaScript 控制台，查看它的输出来获取相关线索。例如，如果出现了“NaCl module crashed”（NaCl 模块崩溃）信息，则可能是 NaCl 模块存在错误，可能需要 [调试](https://developer.chrome.com/native-client/devguide/devcycle/debugging.html)。
 

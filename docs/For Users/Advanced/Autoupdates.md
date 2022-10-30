@@ -4,6 +4,7 @@
 [TOC]
 
 NW.js 倾向于支持社区产出的自更新解决方案，而不是内置一个。以下是已有的值得参考的解决方案：
+
 - [node-webkit-updater](https://github.com/edjafarov/node-webkit-updater)（by [@edjafarov](https://github.com/edjafarov)）
 - [nwjs-autoupdater](https://github.com/oaleynik/nwjs-autoupdater)（by [@oaleynik](https://github.com/oaleynik)）
 - [nw-autoupdater](https://github.com/dsheiko/nw-autoupdater)（by [@dsheiko](https://github.com/dsheiko)）
@@ -12,6 +13,7 @@ NW.js 倾向于支持社区产出的自更新解决方案，而不是内置一�
 
 > **译者注：**
 > 不建议使用。如果不在意增量更新（或自己实现），可以用下面的 [nw-autoupdater](#nw-autoupdater) 包，与 node-webkit-updater 一脉相承，不过做了一些扩展，功能更完善。
+> 
 > - 作者已不再维护（最后一次提交是 2016-6-3）
 > - 不支持增量更新（需要从新包启动，所以只能整包下载）
 
@@ -63,11 +65,13 @@ NW.js 倾向于支持社区产出的自更新解决方案，而不是内置一�
 ## nw-autoupdater
 
 > **译者注：**
+> 
 > - 作者已不再维护（最后一次提交是 2021-5-7）
 > - 可以看成是上面的 [node-webkit-updater](#node-webkit-updater) 的升级版，原理一样，不过做了一些扩展，功能更完善
 > - 不支持增量更新（需要从新包启动，所以只能整包下载）
 
 提供了和 `node-webkit-updater` 类似的 API，但经过扩展，适配 Node 7.x 版本的 NW.js，并完全基于 async/await 语法。可以实现：
+
 - 获取远程服务器上的配置文件
 - 检查远程配置文件的版本号是否大于本地配置文件的版本号
 - 根据远程配置文件中的 `packages` 映射表，下载匹配主机平台的最新有效版本到临时目录

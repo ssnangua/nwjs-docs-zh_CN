@@ -38,18 +38,18 @@ clipboard.clear();
 
 将 `type` 类型的 `data` 写入剪贴板.
 
-该方法将清空剪贴板并替换为传入的 `data`，每次调用都会覆盖掉原来的数据，如果想要同时写入多种类型的数据，需要使用 [clip.set(clipboardDataList)](#clipsetclipboardDataList)。
+该方法将清空剪贴板并替换为传入的 `data`，每次调用都会覆盖掉原来的数据，如果想要同时写入多种类型的数据，需要使用 [clip.set(clipboardDataList)](#clipsetclipboarddatalist)。
 
 !!! tip "图片格式"
     剪贴板支持读写 JPEG 或 PNG 类型的图片数据。如果不传入 `raw` 或传入 `false`，`data` 为有效的 Base64 编码的 [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs)。如果 `raw` 传入 `true`，则 `data` 为 Base64 编码的图片数据（不包含 `data:<mime-type>;base64,` 部分）。
 
 ## clip.set(clipboardData)
 
-* `clipboardData` `{Object}` JSON 对象，包含要写入剪贴板的 `data`、`type` 和 `raw` 信息。参考 [clip.set(data, \[type, \[raw\]])](#clipsetdata-type-raw) 的参数说明。
+* `clipboardData` `{Object}` JSON 对象，包含要写入剪贴板的 `data`、`type` 和 `raw` 信息。参考 [clip.set(data, \[type, \[raw\]\])](#clipsetdata-type-raw) 的参数说明。
 
 ## clip.set(clipboardDataList)
 
-* `clipboardDataList` `{Array}` 要写入剪贴板的 `clipboardData` 数组。参考 [clip.set(clipboardData)](#clipsetclipboardData) 和 [clip.set(data, [type, [raw]])](#clipsetdata-type-raw) 的参数说明。
+* `clipboardDataList` `{Array}` 要写入剪贴板的 `clipboardData` 数组。参考 [clip.set(clipboardData)](#clipsetclipboarddata) 和 [clip.set(data, [type, [raw]])](#clipsetdata-type-raw) 的参数说明。
 
 该方法可同时将多种类型的数据写入剪贴板。
 
@@ -89,7 +89,7 @@ clip.set([
 
 ## clip.get(clipboardDataList)
 
-* `clipboardDataList` `{Array}` 要从剪贴板中读取的 `clipboardData` 数组。该方法支持从剪贴板中读取多种类型的数据。参考 [clip.get(clipboardData)](#clipgetclipboardData) 和 [clip.get([type, [raw]])](#clipgettype-raw) 的参数说明。
+* `clipboardDataList` `{Array}` 要从剪贴板中读取的 `clipboardData` 数组。该方法支持从剪贴板中读取多种类型的数据。参考 [clip.get(clipboardData)](#clipgetclipboarddata) 和 [clip.get([type, [raw]])](#clipgettype-raw) 的参数说明。
 * 返回 `{Array}` 从剪贴板中获取到的数据列表。`clipboardData` 数组，每个元素都包含 `type`、`data` 和 `raw` 信息。
 
 ## clip.readAvailableTypes()

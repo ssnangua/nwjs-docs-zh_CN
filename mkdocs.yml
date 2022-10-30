@@ -1,6 +1,8 @@
 site_name: NW.js 文档
 theme: readthedocs
 theme_dir: 'custom_theme'
+extra_css: 
+    - 'css/extra.css'
 # theme:
 #     name: readthedocs
 #     custom_dir: custom_theme
@@ -38,7 +40,7 @@ pages:
             - '自定义菜单栏': 'For Users/Advanced/Customize Menubar.md'
             - 'JavaScript 环境': 'For Users/Advanced/JavaScript Contexts in NW.js.md'
             - '保护 JavaScript 源代码': 'For Users/Advanced/Protect JavaScript Source Code.md'
-            - '安全性': 'For Users/Advanced/Security in NW.js.md'
+            - '安全性（iframe）': 'For Users/Advanced/Security in NW.js.md'
             - 'Mac 应用商店支持': 'For Users/Advanced/Support for Mac App Store.md'
             - 'ChromeDriver 自动化测试': 'For Users/Advanced/Test with ChromeDriver.md'
             - '透明窗口': 'For Users/Advanced/Transparent Window.md'
@@ -65,7 +67,7 @@ pages:
     - '项目开发':
         - '构建 NW.js': 'For Developers/Building NW.js.md'
         - '贡献代码': 'For Developers/Contributing to NW.js.md'
-        - '私有编解码器': 'For Developers/Enable Proprietary Codecs.md'
+        - '私有编解码器（FFmpeg）': 'For Developers/Enable Proprietary Codecs.md'
         - '相关仓库': 'For Developers/Repositories.md'
         - '了解崩溃机制': 'For Developers/Understanding Crash Dump.md'
         - '编写文档': 'For Developers/Writing Documents for NW.js.md'
