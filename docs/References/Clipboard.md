@@ -95,11 +95,11 @@ clip.set([
 ## clip.readAvailableTypes()
 
 * 返回 `{Array}` 当前剪贴板中有效的数据类型列表。可能的数据类型有：
-  - `text`：无格式文本，可通过 `clip.get('text')` 读取。
-  - `html`：HTML 文本，可通过 `clip.get('html')` 读取。 
-  - `rtf`：富文本，可通过 `clip.get('rtf')` 读取。 
-  - `png`：PNG 图片，可通过 `clip.get('png')` 读取。 
-  - `jpeg`：JPEG 图片，可通过 `clip.get('jpeg')` 读取。 
+    - `text`：无格式文本，可通过 `clip.get('text')` 读取。
+    - `html`：HTML 文本，可通过 `clip.get('html')` 读取。 
+    - `rtf`：富文本，可通过 `clip.get('rtf')` 读取。 
+    - `png`：PNG 图片，可通过 `clip.get('png')` 读取。 
+    - `jpeg`：JPEG 图片，可通过 `clip.get('jpeg')` 读取。 
 
 可以参考返回的类型列表，从剪贴板中获取相应类型的数据。
 

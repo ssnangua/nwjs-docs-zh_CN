@@ -137,17 +137,17 @@ CommonJS(); // 输出：CommonJS 模块
 
 #### 总结
 
-- 如果要编译的代码只使用了 **ES5**：
-  - 编译时可以不带 `--nw-module` 参数
-  - 加载时使用 `evalNWBin()`
-- 如果要编译的代码为 **ES6 模块** 规范：
-  - 编译时需要带 `--nw-module` 参数
-  - 加载时使用 `evalNWBinModule()`
-  - 通过 `import` 来引入 bin 文件中 `export` 出来的 API
-- 如果要编译的代码为 **CommonJS 模块** 规范：
-  - 编译时需要带 `--nw-module` 参数
-  - 加载时使用 `evalNWBinModule()`
-  - 通过 `require()` 来引入 bin 文件中暴露出来的 API
+* 如果要编译的代码只使用了 **ES5**：
+    + 编译时可以不带 `--nw-module` 参数
+    + 加载时使用 `evalNWBin()`
+* 如果要编译的代码为 **ES6 模块** 规范：
+    + 编译时需要带 `--nw-module` 参数
+    + 加载时使用 `evalNWBinModule()`
+    + 通过 `import` 来引入 bin 文件中 `export` 出来的 API
+* 如果要编译的代码为 **CommonJS 模块** 规范：
+    + 编译时需要带 `--nw-module` 参数
+    + 加载时使用 `evalNWBinModule()`
+    + 通过 `require()` 来引入 bin 文件中暴露出来的 API
 
 编译时如果带了 `--nw-module` 参数，加载时必须要用 `evalNWBinModule()`，不带则必须用 `evalNWBin()`，严格对应，用错加载方法会导致应用崩溃。
 
