@@ -1,11 +1,12 @@
 site_name: NW.js 文档
-theme: readthedocs
-theme_dir: 'custom_theme'
+theme:
+    name: readthedocs
+    custom_dir: custom_theme
 extra_css: 
     - 'css/extra.css'
-# theme:
-#     name: readthedocs
-#     custom_dir: custom_theme
+repo_url: https://github.com/ssnangua/nwjs-docs-zh_CN
+edit_uri: blob/main/docs/
+copyright: 本文档由 <i>ssnangua</i> 汉化，项目托管在 <a href="https://github.com/ssnangua/nwjs-docs-zh_CN">GitHub</a>。
 markdown_extensions:
     - markdown.extensions.toc
     - markdown.extensions.admonition

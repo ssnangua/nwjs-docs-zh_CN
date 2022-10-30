@@ -88,6 +88,11 @@ nw.Window.open('https://github.com/nwjs/nw.js', {}, function(new_win) {
 !!! note "获得焦点"
     打开的窗口不会自动获得焦点，如果需要自动获得焦点，可将 `options` 里的 `focus` 设置为 `true`。
 
+> **译者注：**谨慎使用 `new_instance`
+> `new_instance` 会在一个独立的渲染进程中打开新窗口，`callback` 返回的 `win` 以及 `Window.getAll` 获取到的窗口对象是一个副本，不是真实的窗口引用，这将导致和主窗口进程之间的通信非常困难，哪怕只是想在切换界面语言时同步状态都十分麻烦。
+> 目前译者能想到的解决方案就是创建一个本地服务器或 Socket 来中转通信。
+> 所以，除非确定和新窗口没有通信需求，否则请谨慎使用 `new_instance`。
+
 ## win.window
 
 获取本地窗口对应的 DOM 的 window 对象。
