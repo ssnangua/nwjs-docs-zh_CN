@@ -34,13 +34,13 @@ your_menu.append(new nw.MenuItem({
 nw.Window.get().menu = your_menu;
 ```
 
-参考 [Menu](../../References/Menu.md)（菜单）和[Window](../../References/Window.md)（窗口）查看 API 的详细说明。
+参考 [Menu](../../References/Menu.md)（菜单）和 [Window](../../References/Window.md)（窗口）查看 API 的详细说明。
 
 ## 平台差异
 
 ### Windows & Linux
 
-在 Windows 和 Linux 系统上，菜单栏的行为完全相同，每个窗口的都会有一个菜单栏，位于标题栏下方。
+在 Windows 和 Linux 系统上，菜单栏的行为完全相同，每个窗口的都可以有一个菜单栏，位于标题栏下方。
 
 !!! tip "全屏和 Kiosk 模式下的菜单栏"
     在全屏或 Kiosk 模式下，菜单栏会显示在窗口顶部，可以通过将 `win.menu` 设置为 `null` 来完全移除菜单栏。参考 [`win.menu`](../../References/Window.md#winmenu)。
@@ -50,7 +50,7 @@ nw.Window.get().menu = your_menu;
 !!! warning "特性变更"
     从 0.13.0 版本开始，该特性发生了变化，参考 [从 0.12 升级到 0.13](../Migration/From 0.12 to 0.13.md#menu)。
 
-在 Mac 系统中，不管一个应用有多少个窗口，都只会有一个菜单栏，称之为应用菜单。应用的快捷键都依赖这个应用菜单，如 *Quit（退出）*、*Close（关闭）*和 *Copy（复制）*。
+在 Mac 系统中，不管一个应用有多少个窗口，都只会有一个菜单栏，称之为应用菜单。应用的很多快捷键都依托于这个应用菜单，如 *Quit（退出）*、*Close（关闭）*和 *Copy（复制）*。
 
 NW.js 应用启动时，会有一个默认的应用菜单，包含 *应用名*、*Edit（编辑）*和 *Window（窗口）* 菜单项。您可以通过 [menu.createMacBuiltin](../../References/Menu.md#menucreatemacbuiltinappname-options-mac) 方法来获取这个默认菜单，有需要时也可以进行定制。
 
