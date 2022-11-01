@@ -45,7 +45,7 @@
 * Linux：`~/.config/<name>`
 * OS X：`~/Library/Application Support/<name>/Default` (0.12.3 及之前的版本路径为 `~/Library/Application Support/<name>`)
 
-`<name>`为 `package.json` 配置文件中的 **name** 字段。
+`<name>` 为 `package.json` 配置文件中的 **name** 字段。
 
 ## App.manifest
 
@@ -61,7 +61,7 @@
 
 ## App.closeAllWindows()
 
-发送 `close`（关闭）事件给当前应用的所有窗口，如果没有窗口阻塞关闭行为，应用将在所有窗口关闭之后退出。通过该方法退出应用，所有窗口都可以保存数据。
+发送 `close`（关闭）事件给当前应用的所有窗口，如果没有窗口阻塞关闭行为，应用将在所有窗口关闭之后退出。使用该方法退出应用，所有窗口都可以（通过 `close` 事件）保存数据。
 
 ## App.crashBrowser()
 ## App.crashRenderer()
