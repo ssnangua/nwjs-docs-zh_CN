@@ -35,7 +35,7 @@ Chromium 项目最近的版本将 FFmpeg 改为内置编解码器，所以您无
 
 ### 脱离 NW.js 构建 FFmpeg DLL
 
-如果您使用的是官方预构建的 NW.js，只需要重新构建 FFmpeg DLL，然后替换预构建包中的 DLL 即可。相较于构建整个 NW.js（~20G），在下载大小（~1G）上可以节省很多时间。
+如果您使用的是官方预构建的 NW.js，只需要重新构建 FFmpeg DLL，然后替换预构建包中的 DLL 即可。这种方式在下载大小上（\~1G）相较于构建整个 NW.js（\~20G）可以节省很多时间。
 
 **步骤 1.** 从 GitHub 下载定制的 Chromium zip 包。您可以在 https://github.com/nwjs/chromium.src/tags 里找到相应的版本，将 zip 包提取到一个本地文件夹中，如 `~/nw`，解压出来后会包含一个子目录，所以源码文件夹在 `~/nw/<sub-directory-name>` 里面。
 

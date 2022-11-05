@@ -7,7 +7,7 @@
 
 要提取 `minidump` 文件中的堆栈跟踪信息，需要有三个条件：
 
-- 崩溃时生成的 minidump 文件（`.dmp`，）（**译者注：**[小型转储文件](https://learn.microsoft.com/zh-cn/windows/win32/debug/minidump-files)）
+- 崩溃时生成的 minidump 文件（`.dmp`）（**译者注：**[小型转储文件](https://learn.microsoft.com/zh-cn/windows/win32/debug/minidump-files)）
 - NW.js 的 Symbol 文件（`.sym`）（**译者注：**[符号文件](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/using-symbols)）
 - `minidump_stackwalk` 工具
 
