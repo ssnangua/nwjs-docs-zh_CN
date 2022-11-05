@@ -4,7 +4,7 @@
 内容验证，或者叫应用签名，可以阻止正式应用加载非签名文件。提供一个密钥对，`verified_contents.json` 是应用程序文件的签名，由 `sign.py` 工具和私钥（`private_key.pem` 文件）生成，公钥内置于 NW.js 应用中。在应用目录中通过 `nw --verify-content=enforce_strict .` 来运行签名的应用，会正常显示页面。之后尝试对 index.html 文件进行一点修改，再次运行应用，NW 将反馈文件已损坏并立即退出。
 
 !!! note "注意"
-    内容验证无法阻止别人黑入您的应用，比如用其他 NW 包来加载您的应用。可以考虑使用C++编写 , Node.js和NaCl加载 , 以及[nwjc编译JS代码](Protect JavaScript Source Code.md)
+    内容验证无法阻止别人黑入您的应用，比如用其他 NW 包来加载您的应用。可以考虑使用 C++ 编写，通过 Node.js 或 NaCl 来加载，或者使用 [nwjc 编译 JS 代码](Protect JavaScript Source Code.md)。
 
 ## 给应用签名
 
