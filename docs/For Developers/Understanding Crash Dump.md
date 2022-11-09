@@ -46,20 +46,36 @@ NW.js 崩溃时会在下面的默认目录中生成 minidump 文件：
     - `nw` 对应 `{DEBUG_FILE_NAME}`.
     - `{DEBUG_FILE_NAME_WITHOUT_PDB}` 可以通过删除 `{DEBUG_FILE_NAME}` 的 `.pdb` 扩展名转换而来，只有 Windows 系统需要该操作。
 
+> **译者注：** 此处合并了提交请求 [#7966](https://github.com/nwjs/nw.js/pull/7966/commits/8a0f6019a6d0a407c723d3f2d2c7d508c984139b)。
 
-例如，Mac 上，`0.57.1` 版本：
+例如，Mac 上，[0.57.1-sdk](https://dl.nwjs.io/v0.57.1/nwjs-sdk-symbol-v0.57.1-osx-x64.zip) 版本：
 
 ```bash
 -symbols_root/
- -nwjs/
-    -4E7C70708AFD3C889F02B149AB5007080/
-        -nwjs.sym
- -nwjs Framework/
-    -87A9EA49BC473F4C8B7817631E820BEB0/
-        -nwjs Framework.sym
- -nwjs Helper/
-    -5598EA295F4F36FDA21CB9A5B11B11AA0/
-        -nwjs Helper.sym
+ ┣ 📂nwjs
+ ┃ ┗ 📂4E7C70708AFD3C889F02B149AB5007080
+ ┃ ┃ ┗ 📜nwjs.sym
+ ┣ 📂nwjs Framework
+ ┃ ┗ 📂87A9EA49BC473F4C8B7817631E820BEB0
+ ┃ ┃ ┗ 📜nwjs Framework.sym
+ ┗ 📂nwjs Helper
+ ┃ ┗ 📂5598EA295F4F36FDA21CB9A5B11B11AA0
+ ┃ ┃ ┗ 📜nwjs Helper.sym
+```
+
+Windows 上，[0.57.1-sdk](https://dl.nwjs.io/v0.57.1/nwjs-sdk-symbol-v0.57.1-win-x64.7z) 版本：
+
+```bash
+-symbols_root/
+ ┣ 📂node.dll.pdb
+ ┃ ┗ 📂77EEE8FF112F83B34C4C44205044422E1
+ ┃ ┃ ┗ 📜node.dll.sym
+ ┣ 📂nw.dll.pdb
+ ┃ ┗ 📂32D53C4A340B70364C4C44205044422E1
+ ┃ ┃ ┗ 📜nw.dll.sym
+ ┣ 📂nw.exe.pdb
+ ┃ ┗ 📂FDCCA38DC84E3B964C4C44205044422E1
+ ┃ ┃ ┗ 📜nw.exe.sym
 ```
 
 ## 使用 `minidump_stackwalk` 解码 Minidump
@@ -77,6 +93,8 @@ minidump_stackwalk minidump_file.dmp /path/to/symbols_root 2>&1
 ```none
 0x00240000 - 0x02b29fff nw.exe ??? (main) (WARNING: No symbols, nw.exe.pdb, 669008F7B6EE44058CBD5F21BEB5B5CFe)
 ```
+
+> **译者注：** 您还可以尝试社区提供的 Node.js 实现的工具：[@licq/nwjs-minidump](https://www.npmjs.com/package/@licq/nwjs-minidump)。
 
 ## 主动触发崩溃用于测试
 

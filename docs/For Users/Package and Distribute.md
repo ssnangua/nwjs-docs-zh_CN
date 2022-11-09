@@ -12,6 +12,11 @@
 * [nwjs-builder-phoenix](https://github.com/evshiron/nwjs-builder-phoenix)（推荐）
 * [nw-builder](https://github.com/nwjs-community/nw-builder)
 
+> **译者注：**
+> 
+> - [nwjs-builder-phoenix](https://github.com/evshiron/nwjs-builder-phoenix) 已不再维护，译者 fork 了一份，修复了一些问题，增加了一些新特性：[@ssnangua/nwjs-builder-phoenix](https://www.npmjs.com/package/@ssnangua/nwjs-builder-phoenix)
+> - [nw-builder](https://github.com/nwjs-community/nw-builder) 目前有在维护，支持构建 zip 包，但不支持创建安装包（需 Node 16.7.0+）
+
 或者也可以按照下面的说明，手动构建您的应用。
 
 ## 准备应用
