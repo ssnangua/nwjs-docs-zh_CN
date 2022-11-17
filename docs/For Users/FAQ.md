@@ -39,8 +39,9 @@ window.global = undefined;
 ```
 
 参考：
-  * [教程：Angular-CLI 和 NW.js](https://dev.to/thejaredwilcurt/angular-cli-and-nwjs-for-development-49gl)
-  * [NW.js + Angular 8 示例](https://github.com/nwutils/nw-angular-cli-example)
+
+* [教程：Angular-CLI 和 NW.js](https://dev.to/thejaredwilcurt/angular-cli-and-nwjs-for-development-49gl)
+* [NW.js + Angular 8 示例](https://github.com/nwutils/nw-angular-cli-example)
 
 
 ## 如何通过 ESC 键退出全屏模式？
