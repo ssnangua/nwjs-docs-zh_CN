@@ -38,7 +38,7 @@ window.global = undefined;
 <!-- 引入 Angular 2 -->
 ```
 
-* 参考：
+参考：
   * [教程：Angular-CLI 和 NW.js](https://dev.to/thejaredwilcurt/angular-cli-and-nwjs-for-development-49gl)
   * [NW.js + Angular 8 示例](https://github.com/nwutils/nw-angular-cli-example)
 
@@ -69,10 +69,10 @@ nw.App.registerGlobalHotKey(new nw.Shortcut({
    npm install --save-dev nwjs-types
    ```
 1. 强制 VSCode 加载 TypeScript 引擎。
-   * 在 JS 文件顶部添加 `// @ts-check`。
-   * 不是 TypeScript 也会生效。
-   * 当 VSCode 看到 `// @ts-check`，会加载 TypeScript 引擎，然后在 `node_modules` 中查找相应的类型定义，然后会找到 `nwjs-types` 并加载。
-   * 然后智能联想功能就会知道如何给 `nw.` 进行自动补全。
+    * 在 JS 文件顶部添加 `// @ts-check`。
+    * 不是 TypeScript 也会生效。
+    * 当 VSCode 看到 `// @ts-check`，会加载 TypeScript 引擎，然后在 `node_modules` 中查找相应的类型定义，然后会找到 `nwjs-types` 并加载。
+    * 然后智能联想功能就会知道如何给 `nw.` 进行自动补全。
 
 > **译者注：**
 > `nwjs-types` 许久未更新，推荐安装 `@types/nw.js`
