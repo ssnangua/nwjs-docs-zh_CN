@@ -16,6 +16,7 @@
 * Windows 上，在使用 `node-gyp` 或 `npm` 安装模块之前，您需要将 
 `<npm-path>\node_modules\node-gyp\src\win_delay_load_hook.cc` 替换为 https://github.com/nwjs/nw.js/blob/nw18/tools/win_delay_load_hook.cc。
 
+<span id="对于非LTS版本"></span>
 ### 对于非 LTS 版本
 
 如果您使用的是非 LTS 版本，由于 [V8 中的 ABI 差异](https://github.com/nwjs/nw.js/issues/5025)，您需要全局安装 `nw-gyp` 以构建模块。

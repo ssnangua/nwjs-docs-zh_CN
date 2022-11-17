@@ -5,7 +5,7 @@
 
 ## NW.js 能做什么？
 
-NW.js 基于 [Chromium](http://www.chromium.org) 和 [Node.js](http://nodejs.org/)，让您可以在页面中调用 Node.js 的 API 和模块，而且可以将 Web 应用打包为桌面应用。
+NW.js 基于 [Chromium](http://www.chromium.org) 和 [Node.js](http://nodejs.org/)，让您可以在页面中调用 Node.js 的 API 和模块，而且可以很容易的将 Web 应用打包为桌面应用。
 
 ## 获取 NW.js
 

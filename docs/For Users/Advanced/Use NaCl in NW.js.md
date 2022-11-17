@@ -91,7 +91,7 @@ $ make
 
 因为示例包含在 SDK 目录结构中，所以 Makefile 知道如何找到 PNaCl 工具链并使用它来构建模块。如果您在 NaCl SDK 目录外部构建应用，需要设置 `$NACL_SDK_ROOT` 环境变量。参考 [构建 NaCl 模块](https://developer.chrome.com/native-client/devguide/devcycle/building.html)。
 
-假设已按照 [步骤 2](#步骤2启动一个本地服务器) 中的说明启动了本地服务器，您现在可以在 Chrome 中打开 http://localhost:5103/part1 来加载示例，如果 Native Client 模块成功加载，状态文本会从 “LOADING...” 变为 “SUCCESS”。如果遇到问题，请查看下面的 [问题排查](#问题排查) 部分。
+假设已按照 [步骤 2](#步骤2启动一个本地服务器) 中的说明启动了本地服务器，您现在可以在 Chrome 中打开 http://localhost:5103/part1 来加载示例，如果 Native Client 模块成功加载，状态文本会从 “LOADING...” 变为 “SUCCESS”。如果遇到问题，请查看下面的 [故障排查](#故障排查) 部分。
 
 ## 步骤 6：修改 JavaScript 代码来给 NaCl 发送一条消息
 该步骤中，您将修改页面文件（`index.html`），让页面在 NaCl 模块加载完成之后，向它发送一条消息。
@@ -152,16 +152,16 @@ virtual void HandleMessage(const pp::Var& var_message) {
 
 在 Chrome 加载 NaCl 模块后，您将看到来自模块发送的消息。
 
-<span id="问题排查"></span>
-## 问题排查
+<span id="故障排查"></span>
+## 故障排查
 
 如果应用不能运行，查看上面的 [步骤 3](#步骤3设置Chrome浏览器)，检查环境配置是否正确，包括浏览器和本地服务器。确保当前运行的 Chrome 版本大于或等于使用的 SDK 包版本。
 
 另一个有用的调试辅助工具是 Chrome 的 JavaScript 控制台，查看它的输出来获取相关线索。例如，如果出现了“NaCl module crashed”（NaCl 模块崩溃）信息，则可能是 NaCl 模块存在错误，可能需要 [调试](https://developer.chrome.com/native-client/devguide/devcycle/debugging.html)。
 
-文档中又更多关于问题排查的信息：
+文档中又更多关于故障排查的信息：
 
-* [问题排查 FAQ](https://developer.chrome.com/native-client/faq.html#faq-troubleshooting)
+* [故障排查 FAQ](https://developer.chrome.com/native-client/faq.html#faq-troubleshooting)
 * [Progress Events](https://developer.chrome.com/native-client/devguide/coding/progress-events.html) 文档包含了一些关于处理错误事件的有用信息。
 
 ## 下一步

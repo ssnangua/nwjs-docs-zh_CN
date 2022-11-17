@@ -16,6 +16,8 @@
 * **项目开发** - 面向想要扩展 NW.js 项目的开发者
 * **API** - NW.js 的 API 文档
 
+> * **WIKI** - 部分 [WIKI](https://github.com/nwjs/nw.js/wiki) 文章的翻译和相关资料，可作为补充参考
+
 可在 [我们的 git](https://github.com/nwjs/nw.js/tree/nw13/docs) 上查阅文档的源码，也欢迎提交 PR。
 
 ## 目录
@@ -65,3 +67,12 @@
     - [Tray](References/Tray.md)（托盘图标）
     - [webview 标签](References/webview Tag.md)
     - [Window](References/Window.md)（窗口）
+* WIKI
+    - [特性列表](Wiki/Features list.md)
+    - [入门指南](Wiki/Getting Started with nw.js.md)
+    - [运行应用](Wiki/How to run apps.md)
+    - [故障排查](Wiki/Troubleshooting.md)
+    - [使用 Node 模块](Wiki/Using Node modules.md)
+    - [使用 nw-gyp 构建原生模块](Wiki/Build native modules with nw-gyp.md)
+    - [文件变更实时重新加载](Wiki/Livereload nw.js on changes.md)
+    - [数据持久化](Wiki/Save persistent data in app.md)

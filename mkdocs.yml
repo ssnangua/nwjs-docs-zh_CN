@@ -74,3 +74,12 @@ pages:
         - '编写文档': 'For Developers/Writing Documents for NW.js.md'
         - '编写测试用例': 'For Developers/Writing Test Cases for NW.js.md'
         - '文档贡献者': 'For Developers/Contributors of Documents.md'
+    - 'WIKI':
+        - '特性列表': 'Wiki/Features list.md'
+        - '入门指南': 'Wiki/Getting Started with nw.js.md'
+        - '运行应用': 'Wiki/How to run apps.md'
+        - '故障排查': 'Wiki/Troubleshooting.md'
+        - '使用 Node 模块': 'Wiki/Using Node modules.md'
+        - '使用 nw-gyp 构建原生模块': 'Wiki/Build native modules with nw-gyp.md'
+        - '文件变更实时重新加载': 'Wiki/Livereload nw.js on changes.md'
+        - '数据持久化': 'Wiki/Save persistent data in app.md'
