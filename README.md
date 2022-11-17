@@ -1,6 +1,6 @@
 # NW.js 中文文档
 
-> 本文档由 _ssnangua_ 汉化，当前版本：nw69。
+> 本文档由 _ssnangua_ 汉化，当前版本：nw70。
 > 
 > - 中文文档站点：https://nwjs-docs.readthedocs.io/zh/latest/
 > - 中文文档源码：https://github.com/ssnangua/nwjs-docs-zh_CN
