@@ -83,3 +83,5 @@ pages:
         - '使用 nw-gyp 构建原生模块': 'Wiki/Build native modules with nw-gyp.md'
         - '文件变更实时重新加载': 'Wiki/Livereload nw.js on changes.md'
         - '数据持久化': 'Wiki/Save persistent data in app.md'
+        - 'Node 集成到 Chromium 的原理': 'Wiki/How node.js is integrated with chromium.md'
+        - '使用 NW.js 的应用和公司列表': 'Wiki/List of apps and companies using nw.js.md'

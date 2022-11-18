@@ -16,7 +16,7 @@ NW.js 基于 [Chromium](http://www.chromium.org) 和 [Node.js](http://nodejs.org
 
 **示例 1. Hello World**
 
-![Hello World](https://raw.githubusercontent.com/ssnangua/nwjs-docs-zh_CN/main/assets/wiki_getting_started_with_nwjs_hello_world.jpg)
+<img src="https://raw.githubusercontent.com/ssnangua/nwjs-docs-zh_CN/main/assets/wiki_getting_started_with_nwjs_hello_world.jpg" width="400" />
 
 创建 `index.html`：
 
@@ -70,7 +70,7 @@ $ /nw可执行文件路径 ./app.nw
 
 **示例 2. 原生 UI API**
 
-![原生 UI API](https://raw.githubusercontent.com/ssnangua/nwjs-docs-zh_CN/main/assets/wiki_getting_started_with_nwjs_native_ui_api.jpg)
+<img src="https://raw.githubusercontent.com/ssnangua/nwjs-docs-zh_CN/main/assets/wiki_getting_started_with_nwjs_native_ui_api.jpg" width="400" />
 
 NW.js 有一些可以控制原生 UI 的 API，您可以通过它们来控制窗口、菜单等等。
 
