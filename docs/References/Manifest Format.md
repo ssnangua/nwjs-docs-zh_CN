@@ -194,7 +194,7 @@
 
 ### title
 
-* `{String}` 窗口的默认标题。使用该字段可以在在启动应用时显示自定义的标题。页面加载后会显示为页面的 `<title>`（`document.title`）。
+* `{String}` 打开窗口时显示的默认标题。页面加载后，窗口标题会显示为页面的标题（`document.title`）。
 
 ### width
 ### height
