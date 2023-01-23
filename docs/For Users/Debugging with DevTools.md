@@ -6,7 +6,7 @@
 
 ## 打开开发者工具
 
-Windows 和 Linux 下使用快捷键 <kbd>F12</kbd> 来打开开发者工具，Mac 下使用 </kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> 来打开。
+Windows 和 Linux 下使用快捷键 <kbd>F12</kbd> 来打开开发者工具，Mac 下使用 <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> 来打开。
 
 此外，也可以在代码中使用 NW.js 的 API [`win.showDevTools()`](../References/Window.md##winshowdevtoolsiframe-callback) 来打开一个窗口的开发者工具。
 
