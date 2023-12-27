@@ -25,6 +25,9 @@ markdown_extensions:
     - pymdownx.arithmatex
     - pymdownx.mark
     - pymdownx.critic
+plugins:
+  - search:
+        separator: '[\s\u200b\-]'
 pages:
 # nav:
     - '主页': 'index.md'
