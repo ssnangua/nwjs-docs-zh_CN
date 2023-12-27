@@ -10,7 +10,7 @@
 
 `Node` 和 `Chromium` 都有自己的主循环。所以要让 `Node` 在 `Chromium` 中运行需要一些努力。 NW.js 的目标特性之一是可以在 DOM 中 **直接** 调用 Node 函数，所以我们将它们集成到同一个线程中，这需要集成 Node 的主循环和 Chromium 的渲染进程循环。
 
-为了使 Node 和 DOM 中的对象能互相访问，Node 的 V8 引擎被设置为 Chromium 的 V8 引擎，2 个环境中的对象处于不同的 `contexts`（上下文）中，以保证命名空间互不干扰。
+为了使 Node 和 DOM 中的对象能互相访问，Node 和 Chromium 使用同一份 V8 引擎实例，2 个环境中的对象处于不同的 `contexts`（上下文）中，以保证命名空间互不干扰。
 
 ## 主循环集成
 
